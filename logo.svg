@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-label="PowerBite">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3AAFA9" />
+      <stop offset="1" stop-color="#2B7A78" />
+    </linearGradient>
+  </defs>
+  <rect width="220" height="56" rx="12" fill="url(#grad)" />
+  <g transform="translate(14, 38)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#FEFFFF">PowerBite</text>
+  </g>
+</svg>
