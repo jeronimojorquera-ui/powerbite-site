@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap');
 
 /*
  * Core colour palette. These custom properties drive the look and feel of
@@ -6,11 +6,12 @@
  * here rather than scattering colours throughout the file.
  */
 :root {
-  --primary: #2B7A78;
-  --secondary: #3AAFA9;
-  --accent: #DEF2F1;
-  --dark: #17252A;
-  --light: #FEFFFF;
+  /* Updated warm colour palette reflecting chocolate, maní y coco */
+  --primary: #5D4037;    /* cocoa brown */
+  --secondary: #A1887F;  /* peanut beige */
+  --accent: #F5EBE0;     /* coconut cream */
+  --dark: #3E2723;      /* dark cocoa */
+  --light: #FFFFFF;      /* pure white */
 }
 
 /* Reset and layout helpers */
@@ -21,10 +22,15 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background: var(--light);
   color: var(--dark);
   line-height: 1.5;
+}
+
+/* Headings and brand use Montserrat for extra impact */
+h1, h2, h3, h4, h5, .brand strong {
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -348,4 +354,50 @@ footer {
 
 footer a {
   color: #b4f3ef;
+}
+
+/* Benefits section */
+#beneficios {
+  padding: 60px 0;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e8f3f3;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(23,37,42,0.06);
+}
+
+.benefit .emoji {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.benefit h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+.benefit p {
+  color: #516264;
+  font-size: 16px;
 }
