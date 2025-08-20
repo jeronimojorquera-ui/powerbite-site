@@ -31,3 +31,19 @@ if (storedPhone) {
     link.setAttribute('href', `https://wa.me/${storedPhone}?text=Hola%20PowerBite!%20Quiero%20comprar%20bolsas%20de%20180g%20(%7E30g%20de%20prote%C3%ADna)`);
   });
 }
+
+// Gallery lightbox: permite ampliar las imágenes al hacer clic y cerrarlas al volver a hacer clic en la superposición.
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    lightboxImg.src = img.src;
+    lightbox.classList.add('active');
+  });
+});
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+}
