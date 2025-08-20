@@ -3,8 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PowerBite — Energía real, sabor brutal</title>
-  <meta name="description" content="Bocados de maní con chocolate de alto rendimiento. Bolsas de 180 g con ~30 g de proteína. Hecho en Santiago.">
+  <title>PowerBite — Galletones de maní, chocolate y coco</title>
+  <meta name="description" content="PowerBite: galletones densos de maní con chocolate y coco. Bolsas de 180 g con ~30 g de proteína. Snacks saludables y deliciosos hechos en Santiago.">
+  <!-- Performance: preconnect to Google Fonts to speed up font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Open Graph / Social meta tags -->
+  <meta property="og:title" content="PowerBite — Galletones de maní, chocolate y coco">
+  <meta property="og:description" content="Snack premium: galletones de maní con chocolate y coco. 180 g por bolsa con ~30 g de proteína. Hechos a mano en Santiago.">
+  <meta property="og:image" content="product_stack2.jpg">
+  <meta property="og:url" content="https://jeronimojorquera-ui.github.io/powerbite-site/">
+  <meta property="og:type" content="product">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PowerBite — Galletones de maní, chocolate y coco">
+  <meta name="twitter:description" content="Snack premium: galletones de maní con chocolate y coco. 180 g por bolsa con ~30 g de proteína. Hechos a mano en Santiago.">
+  <meta name="twitter:image" content="product_stack2.jpg">
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "PowerBite Coco",
+    "description": "Galletón de maní con chocolate y coco. Snack de 180 g con ~30 g de proteína.",
+    "image": [
+      "product_stack2.jpg"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "PowerBite"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "CLP",
+      "price": "3000",
+      "availability": "https://schema.org/InStock",
+      "url": "https://jeronimojorquera-ui.github.io/powerbite-site/"
+    }
+  }
+  </script>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,7 +52,7 @@
         <div class="brand">
           <!-- Utilizamos el logo con el maní levantando pesas proporcionado por el cliente -->
           <!-- Actualizamos el logo para utilizar la nueva ilustración del maní levantando pesas enviada por el cliente -->
-          <img src="logo_peanut.jpg" alt="Logo PowerBite">
+        <img src="logo_peanut.jpg" alt="Logo PowerBite" loading="lazy">
           <strong>PowerBite</strong>
         </div>
         <div class="links">
@@ -38,13 +75,14 @@
             <div class="kpi"><strong>65&nbsp;g</strong><span class="small">chocolate</span></div>
           </div>
           <div class="cta">
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20bolsas%20de%20180g%20(%7E30g%20de%20prote%C3%ADna)" target="_blank" rel="noopener">Comprar ahora</a>
-            <a class="btn btn-secondary" href="#precios">Ver precios</a>
+          <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">Comprar</a>
+            <!-- El segundo CTA lleva a la sección de ingredientes/nutrición -->
+            <a class="btn btn-secondary" href="#nutricion">Ver ingredientes</a>
             <span class="subtle">Hecho a mano • Packaging kraft • Producción local</span>
           </div>
         </div>
         <!-- Imagen del producto en lugar de la caja de mock. Usamos una fotografía real de los galletones de coco apilados enviada por el cliente. -->
-        <img src="product_stack2.jpg" alt="Galletones de coco apilados" class="hero-img">
+        <img src="product_stack2.jpg" alt="Galletones de coco apilados" class="hero-img" loading="lazy">
       </div>
     </div>
   </header>
@@ -57,7 +95,7 @@
           <div class="benefit">
             <div class="emoji">💪</div>
             <h3>Proteína natural</h3>
-            <p>Alto contenido proteico por bolsa.</p>
+            <p>Alto contenido proteico por bolsa (~30 g).</p>
           </div>
           <div class="benefit">
             <div class="emoji">⚡</div>
@@ -65,9 +103,14 @@
             <p>Carbohidratos y grasas saludables.</p>
           </div>
           <div class="benefit">
-            <div class="emoji">🥥</div>
+            <div class="emoji">😋</div>
             <h3>Sabor intenso</h3>
-            <p>Cacao puro, maní crocante y coco.</p>
+            <p>Cacao puro, maní crocante y coco rallado.</p>
+          </div>
+          <div class="benefit">
+            <div class="emoji">🌱</div>
+            <h3>Sustentable</h3>
+            <p>Packaging kraft reutilizable y compostable.</p>
           </div>
         </div>
       </div>
@@ -124,7 +167,7 @@
               <li>~30,7&nbsp;g proteína</li>
               <li>Sabor: coco</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20bolsas%20de%20180g%20(%7E30g%20de%20prote%C3%ADna)" target="_blank" rel="noopener">Comprar</a>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">Comprar</a>
           </div>
           <div class="price-card featured">
             <h3>Pack 3</h3>
@@ -134,7 +177,7 @@
               <li>Sabor: coco</li>
               <li>Perfecto para la semana</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Me%20gustar%C3%ADa%20encargar%20un%20pack%20de%203%20bolsas" target="_blank" rel="noopener">Pedir</a>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%203%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Pedir</a>
           </div>
           <div class="price-card">
             <h3>Pack 5</h3>
@@ -145,7 +188,7 @@
               <li>Ideal para oficinas/gimnasios</li>
               <li>Incluye despacho cercano*</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Deseo%20encargar%20un%20pack%20de%205%20bolsas" target="_blank" rel="noopener">Encargar</a>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%205%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Encargar</a>
             <span class="small">*A coordinar en Santiago.</span>
           </div>
         </div>
@@ -159,8 +202,37 @@
         <p class="section-sub">Algunas fotos de nuestros galletones y clientes felices.</p>
         <div class="gallery">
           <!-- Galería actualizada con fotos reales del producto y clientes -->
-          <img src="product_stack2.jpg" alt="Galletones de coco apilados">
-          <img src="customer_pack.jpg" alt="Cliente feliz con bolsa de PowerBite">
+          <img src="product_stack2.jpg" alt="Galletones de coco apilados" loading="lazy">
+          <img src="customer_pack.jpg" alt="Cliente feliz con bolsa de PowerBite" loading="lazy">
+          <img src="hero_coco_stack.jpg" alt="Detalle de galletones con coco rallado" loading="lazy">
+          <img src="product_coco.jpg" alt="Otra vista de nuestros galletones de coco" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox overlay for viewing imágenes en alta resolución -->
+    <div id="lightbox" class="lightbox-overlay">
+      <img src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- Testimonios de clientes -->
+    <section id="testimonios">
+      <div class="container">
+        <h2 class="section-title">Testimonios</h2>
+        <p class="section-sub">Nuestros clientes nos recomiendan.</p>
+        <div class="cards testimonials">
+          <div class="card">
+            <p>“Los PowerBite Coco son mi snack favorito después del entrenamiento. Se sienten naturales y entregan la energía que necesito.”</p>
+            <strong>— Camila, runner</strong>
+          </div>
+          <div class="card">
+            <p>“Su textura suave y el toque de coco me fascinan. ¡Recomiendo PowerBite a todos mis amigos!”</p>
+            <strong>— Mateo, estudiante</strong>
+          </div>
+          <div class="card">
+            <p>“Excelente opción para mantenerme en forma y disfrutar de un dulce saludable. ¡Me declaro fan de PowerBite Coco!”</p>
+            <strong>— Antonia, coach</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -190,11 +262,15 @@
         <div>&copy; <span class="year"></span> PowerBite — Hecho en Santiago</div>
         <div>
           <a href="https://www.instagram.com/powerbite_chile" target="_blank" rel="noopener">Instagram</a> · 
-          <a class="whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20bolsas%20de%20180g%20(%7E30g%20de%20prote%C3%ADna)" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   </footer>
   <script src="script.js"></script>
+  <!-- Floating WhatsApp button para dispositivos móviles -->
+  <a href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" class="floating-whatsapp whatsapp" target="_blank" rel="noopener" aria-label="Contáctanos por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 24 24"><path d="M20.52 3.48a11.8 11.8 0 0 0-16.69 0 11.36 11.36 0 0 0-3.48 8.14c0 2.1.55 4.16 1.6 5.98L1 23l5.49-1.44a11.59 11.59 0 0 0 13.47-2.82 11.36 11.36 0 0 0 0-16.26zM12.09 21.5a9.67 9.67 0 0 1-5.28-1.53l-.38-.23-3.26.86.87-3.18-.25-.41a9.73 9.73 0 0 1 1.54-12.1 10 10 0 0 1 13.72 0 9.73 9.73 0 0 1 0 13.83 9.91 9.91 0 0 1-7.96 3.76z"/><path d="M17.28 14.89c-.25-.12-1.47-.74-1.69-.83-.23-.08-.39-.12-.55.13s-.63.83-.77 1c-.14.17-.28.18-.53.07a8.04 8.04 0 0 1-3.81-3.3c-.28-.47.28-.44.8-1.47.09-.17.05-.32-.03-.44-.08-.12-.55-1.32-.77-1.81-.2-.48-.4-.42-.56-.43H9c-.17 0-.43.06-.65.29a2.7 2.7 0 0 0-.85 2.03c0 1.2.87 2.36 1 2.53.12.17 1.72 2.62 4.17 3.67.58.25 1.03.4 1.38.51.58.18 1.1.15 1.51.09.46-.07 1.47-.6 1.68-1.18.21-.59.21-1.1.15-1.18-.06-.09-.23-.14-.49-.26z"/></svg>
+  </a>
 </body>
 </html>
