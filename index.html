@@ -42,47 +42,86 @@
     }
   }
   </script>
+  <!-- FAQ structured data: define common questions and answers for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Dónde producen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Elaboramos en pequeños lotes en Santiago para asegurar frescura y sabor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo compro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Escríbenos por Instagram o WhatsApp. Aceptamos transferencia y coordinamos el despacho."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacen productos personalizados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, para oficinas, eventos o regalos podemos armar packs especiales y branding a medida."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <!-- Utilizamos el logo con el maní levantando pesas proporcionado por el cliente -->
-          <!-- Actualizamos el logo para utilizar la nueva ilustración del maní levantando pesas enviada por el cliente -->
+  <!-- Sticky navigation bar with quick links and CTA.  A sticky nav improves
+       recall and conversions, especially on mobile.  The nav remains at the
+       top of the viewport as the user scrolls. -->
+  <nav class="site-nav">
+    <div class="container nav-content">
+      <div class="brand">
         <img src="logo_peanut.jpg" alt="Logo PowerBite" loading="lazy">
-          <strong>PowerBite</strong>
+        <strong>PowerBite</strong>
+      </div>
+      <div class="links">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#ingredientes">Ingredientes</a>
+        <a href="#nutricion">Nutrición</a>
+        <a href="#precios">Precios</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn" href="https://www.instagram.com/powerbite_chile" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section introducing the product with a clear tagline, value
+       proposition and two strong calls to action.  The hero includes
+       nutritional highlights and uses a warm, appetizing palette to
+       reinforce the PowerBite brand. -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Nuevo&nbsp;•&nbsp;Sabor&nbsp;coco&nbsp;•&nbsp;~30&nbsp;g&nbsp;proteína</span>
+        <h1>Energía real.<br>Sabor irresistible.</h1>
+        <p class="lead">Galletones densos de <strong>maní y chocolate</strong> con un toque de coco. Un snack premium para el gym, la universidad o la oficina.</p>
+        <div class="cta">
+          <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">Comprar ahora</a>
+          <a class="btn btn-secondary" href="#ingredientes">Ver ingredientes</a>
         </div>
-        <div class="links">
-          <a href="#producto">Producto</a>
-          <a href="#nutricion">Nutrición</a>
-          <a href="#precios">Precios</a>
-          <a href="#faq">FAQ</a>
-          <a class="btn btn" href="https://www.instagram.com/powerbite_chile" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </nav>
-      <div class="hero-grid">
-        <div>
-          <span class="badge">Nuevo · Sabor coco · ~30&nbsp;g proteína</span>
-          <h1>Energía real,<br> sabor brutal</h1>
-          <p class="lead">Nuestros galletones de <strong>maní y chocolate</strong> con coco aportan ~30&nbsp;g de proteína por bolsa. Ideales para el gym, para ganar masa muscular y recargar energía.</p>
-          <div class="kpis">
-            <div class="kpi"><strong>180&nbsp;g</strong><span class="small">por bolsa</span></div>
-            <div class="kpi"><strong>~30&nbsp;g</strong><span class="small">proteína</span></div>
-            <div class="kpi"><strong>100&nbsp;g</strong><span class="small">maní</span></div>
-            <div class="kpi"><strong>65&nbsp;g</strong><span class="small">chocolate</span></div>
-          </div>
-          <div class="cta">
-          <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">Comprar</a>
-            <!-- El segundo CTA lleva a la sección de ingredientes/nutrición -->
-            <a class="btn btn-secondary" href="#nutricion">Ver ingredientes</a>
-            <span class="subtle">Hecho a mano • Packaging kraft • Producción local</span>
-          </div>
-        </div>
-        <!-- Imagen principal del héroe. Utilizamos la nueva fotografía del packaging con galletones de coco para reforzar la identidad de marca -->
-        <img src="packaging_hero.png" alt="Bolsa PowerBite y galletas de coco" class="hero-img" loading="lazy">
+        <ul class="hero-kpis">
+          <li><strong>180&nbsp;g</strong><span>por bolsa</span></li>
+          <li><strong>~30&nbsp;g</strong><span>proteína</span></li>
+          <li><strong>100&nbsp;g</strong><span>maní</span></li>
+          <li><strong>65&nbsp;g</strong><span>chocolate</span></li>
+        </ul>
+      </div>
+      <div class="hero-image">
+        <img src="packaging_hero.png" alt="Bolsa PowerBite y galletones de coco" loading="lazy">
       </div>
     </div>
   </header>
@@ -115,18 +154,18 @@
         </div>
       </div>
     </section>
-    <section id="producto">
+    <!-- Ingredientes y alérgenos -->
+    <section id="ingredientes">
       <div class="container">
-        <h2 class="section-title">El producto</h2>
-        <p class="section-sub">Cada bolsa contiene bocados densos de maní y chocolate con un toque de coco. Actualmente solo vendemos un único sabor: coco.</p>
-        <!-- Mostramos solo un formato de sabor, ya que el emprendimiento ofrece exclusivamente coco -->
-        <div class="cards">
-          <div class="card">
-            <span class="chip">Coco</span>
-            <h3>PowerBite Coco</h3>
-            <p>Un aroma tropical y textura suave, con el crujido clásico del maní y un toque de coco rallado.</p>
-          </div>
-        </div>
+        <h2 class="section-title">Ingredientes</h2>
+        <p class="section-sub">PowerBite está compuesto por ingredientes simples y naturales. Cada bolsa contiene:</p>
+        <ul class="ingredient-list">
+          <li><strong>100&nbsp;g</strong> de maní tostado sin sal</li>
+          <li><strong>65&nbsp;g</strong> de chocolate cobertura semiamargo</li>
+          <li><strong>1&nbsp;g</strong> de coco rallado</li>
+          <li>Sin conservantes ni aditivos químicos</li>
+        </ul>
+        <p class="note">Contiene frutos secos. Producto elaborado en instalaciones que manipulan maní.</p>
       </div>
     </section>
     <section id="nutricion">
@@ -137,19 +176,19 @@
           <div class="card">
             <h3>Macros</h3>
             <ul class="features">
-              <li>Proteínas: ~30,7&nbsp;g</li>
-              <li>Grasas: altas (maní + cacao)</li>
+              <li>Proteínas: ~30&nbsp;g por bolsa</li>
+              <li>Grasas: saludables (provenientes de maní y cacao)</li>
               <li>Carbohidratos: moderados</li>
-              <li>Fibra: presente (maní, coco, fruta)</li>
+              <li>Fibra: aporta saciedad gracias al maní y el coco</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Ingredientes</h3>
-            <p>Maní tostado (100&nbsp;g), chocolate cobertura (65&nbsp;g), coco rallado (5&nbsp;g). Sin conservantes.</p>
+            <h3>Detalle de ingredientes</h3>
+            <p>Cada 180&nbsp;g se compone de 100&nbsp;g de maní tostado, 65&nbsp;g de chocolate semiamargo y 1&nbsp;g de coco rallado. Sin conservantes ni aditivos.</p>
           </div>
           <div class="card">
-            <h3>Sugerencias</h3>
-            <p>Ideal como snack entre comidas o para después de entrenar. Mantén el producto en un lugar fresco y seco.</p>
+            <h3>Cómo consumir</h3>
+            <p>Disfruta PowerBite como snack entre comidas, antes o después de entrenar o para calmar el hambre en cualquier momento. Conservar en un lugar fresco y seco.</p>
           </div>
         </div>
       </div>
@@ -163,33 +202,34 @@
             <h3>Bolsa estándar</h3>
             <div class="price">$3.000</div>
             <ul class="features">
-              <li>180&nbsp;g por bolsa</li>
-              <li>~30,7&nbsp;g proteína</li>
-              <li>Sabor: coco</li>
+              <li>Una bolsa de 180&nbsp;g</li>
+              <li>~30&nbsp;g de proteína</li>
+              <li>Sabor único: coco</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)%20-%20aprox%2030g%20de%20prote%C3%ADna" target="_blank" rel="noopener">Comprar</a>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20comprar%20una%20bolsa%20PowerBite%20Coco%20(180g)" target="_blank" rel="noopener">Comprar</a>
           </div>
           <div class="price-card featured">
             <h3>Pack 3</h3>
             <div class="price">$8.500</div>
             <ul class="features">
               <li>3 bolsas (ahorras $500)</li>
-              <li>Sabor: coco</li>
-              <li>Perfecto para la semana</li>
+              <li>Sabor único: coco</li>
+              <li>Ideal para abastecerte por la semana</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%203%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Pedir</a>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%203%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Pedir pack 3</a>
           </div>
-          <div class="price-card">
+          <div class="price-card best-value">
+            <span class="badge-price">Mejor valor</span>
             <h3>Pack 5</h3>
             <div class="price">$13.500</div>
             <ul class="features">
               <li>5 bolsas (ahorras $1.500)</li>
-              <li>Sabor: coco</li>
-              <li>Ideal para oficinas/gimnasios</li>
-              <li>Incluye despacho cercano*</li>
+              <li>Sabor único: coco</li>
+              <li>Ideal para oficinas y gimnasios</li>
+              <li>Incluye despacho a domicilio*</li>
             </ul>
-            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%205%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Encargar</a>
-            <span class="small">*A coordinar en Santiago.</span>
+            <a class="btn btn-primary whatsapp" href="https://wa.me/56934074656?text=Hola%20PowerBite!%20Quiero%20encargar%20un%20pack%20de%205%20bolsas%20PowerBite%20Coco" target="_blank" rel="noopener">Pedir pack 5</a>
+            <span class="small">*Despacho válido en ciertas comunas de Santiago.</span>
           </div>
         </div>
       </div>
@@ -237,24 +277,17 @@
       </div>
     </section>
 
-    <!-- Sección de clientes felices -->
+    <!-- Sección de clientes felices con carrusel táctil para mobile-first. Utiliza
+         scroll-snap para crear un slider suave y sin dependencias externas. -->
     <section id="clientes">
       <div class="container">
         <h2 class="section-title">Clientes felices</h2>
-        <p class="section-sub">Algunas imágenes de nuestros clientes disfrutando de PowerBite.</p>
-        <div class="clientes-grid">
-          <div class="cliente">
-            <img src="cliente1.jpg" alt="Cliente feliz con su PowerBite en el parque" loading="lazy">
-          </div>
-          <div class="cliente">
-            <img src="cliente2.jpg" alt="Cliente disfrutando de un PowerBite en el jardín" loading="lazy">
-          </div>
-          <div class="cliente">
-            <img src="customer_lifestyle1.png" alt="Joven disfrutando un galletón PowerBite" loading="lazy">
-          </div>
-          <div class="cliente">
-            <img src="customer_lifestyle2.png" alt="Chica degustando galletón PowerBite" loading="lazy">
-          </div>
+        <p class="section-sub">Nuestros clientes disfrutan PowerBite en cualquier momento y lugar.</p>
+        <div class="clientes-carousel">
+          <div class="cliente-card"><img src="cliente1.jpg" alt="Cliente feliz con su PowerBite en el parque" loading="lazy"></div>
+          <div class="cliente-card"><img src="cliente2.jpg" alt="Cliente disfrutando de un PowerBite en el jardín" loading="lazy"></div>
+          <div class="cliente-card"><img src="customer_lifestyle1.png" alt="Joven disfrutando un galletón PowerBite" loading="lazy"></div>
+          <div class="cliente-card"><img src="customer_lifestyle2.png" alt="Chica degustando un galletón PowerBite" loading="lazy"></div>
         </div>
       </div>
     </section>

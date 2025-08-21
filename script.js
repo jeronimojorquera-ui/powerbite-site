@@ -47,3 +47,53 @@ if (lightbox) {
     lightbox.classList.remove('active');
   });
 }
+
+// Toast notification helper.  Creates a toast element and handles
+// automatic fade in/out.  Accepts a message string to display.
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  // Allow DOM update before applying show class
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+  // Hide after 3 seconds
+  setTimeout(() => {
+    toast.classList.remove('show');
+    // Remove from DOM after transition ends
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }, 3000);
+}
+
+// Intercept WhatsApp buttons and floating button to show a toast
+// notification before opening the link.  This improves user
+// perception of responsiveness.  If the user has a custom phone
+// number stored via localStorage, the href will already be updated
+// above.
+document.querySelectorAll('.btn.whatsapp, .floating-whatsapp').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    // Only intercept left click / tap
+    e.preventDefault();
+    const url = this.getAttribute('href');
+    showToast('Abriendo WhatsApp…');
+    setTimeout(() => {
+      window.open(url, '_blank');
+    }, 800);
+  });
+  // Record event using GA4/Plausible if available
+  btn.addEventListener('click', function () {
+    if (window.gtag) {
+      gtag('event', 'click_whatsapp', {
+        event_category: 'cta',
+        event_label: btn.textContent.trim()
+      });
+    }
+    if (window.plausible) {
+      plausible('click_whatsapp', { props: { label: btn.textContent.trim() } });
+    }
+  });
+});
