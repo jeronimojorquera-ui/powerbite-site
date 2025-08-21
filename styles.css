@@ -666,3 +666,8 @@ footer a {
   opacity: 0.95;
   transform: translateX(-50%) translateY(0);
 }
+/* Hide pack x3 and pack x5 price cards on pricing section */
+.price-card.featured,
+.price-card.best-value {
+  display: none;
+}
